@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Themed Layout</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="light">
+  <div class="container">
+    <h1>Welcome to Themed Startup</h1>
+    <p>This layout maintains consistent fonts, spacing, and colors across themes.</p>
+    <button id="themeToggle">Toggle Theme</button>
+    <a href="#">Learn more</a>
+  </div>
+
+  <script>
+    const btn = document.getElementById('themeToggle');
+    btn.addEventListener('click', () => {
+      const currentTheme = document.body.getAttribute('data-theme');
+      document.body.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
